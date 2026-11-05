@@ -77,7 +77,7 @@
     .fee-tag { font-size: 28px; font-weight: 800; color: #ea580c; margin: 6px 0; }
     .qr-container { margin: 10px auto; display: inline-block; padding: 8px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
     .qr-container img { display: block; width: 140px; height: 140px; }
-    .upi-info { font-size: 12.5px; color: #7c2d12; margin-top: 4px; font-weight: 500; }
+    .upi-info { font-size: 12.5px; color: #7c2d12; margin-top: 4px; font-weight: 600; }
 
     button {
       width: 100%;
@@ -223,11 +223,12 @@
     <div class="payment-box">
       <div class="payment-title">Registration Fee</div>
       <div class="fee-tag">₹500</div>
+      <div class="payment-title">Scan to Pay</div>
       <div class="qr-container">
         <!-- REPLACE 'your-upi-id@okaxis' with your actual VPA -->
         <img id="upiQr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=link2tii@okicici%26pn=TinkKrea%26am=500%26tn=DHR_BuildCodeBattle" alt="UPI QR Code">
       </div>
-      <p class="upi-info">Scan to Pay. | UPI ID: link2tii@okicici | UPI Number: 8900675570 </p>
+      <p class="upi-info">UPI ID: link2tii@okicici | UPI Number: 8900675570 </p>
       
       <div style="margin-top: 14px; text-align: left;">
         <label style="color: #7c2d12;">UPI Reference No. / UTR / Transaction ID *</label>
