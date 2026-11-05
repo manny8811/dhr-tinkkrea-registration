@@ -97,27 +97,64 @@
     #msg { text-align: center; font-size: 14px; font-weight: 600; margin-top: 14px; }
     .success { color: #16a34a; }
     .error { color: #dc2626; }
-    .brand-header {
+    .brand-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.brand-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 28px;
 }
+
+/* Scaled up for visual balance */
 .brand-header img.logo-tinkkrea {
-  height: 58px;
+  height: 90px;
+  max-width: 130px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.04));
 }
+
 .brand-header img.logo-tii {
-  height: 48px;
+  height: 70px;
+  max-width: 180px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.04));
 }
+
 .brand-divider {
-  width: 1.5px;
-  height: 40px;
-  background-color: #cbd5e1;
+  width: 2px;
+  height: 65px;
+  background: linear-gradient(180deg, transparent, #cbd5e1, transparent);
+}
+
+/* Mobile responsive scaling */
+@media (max-width: 480px) {
+  .brand-card {
+    padding: 12px 16px;
+  }
+  .brand-header {
+    gap: 16px;
+  }
+  .brand-header img.logo-tinkkrea {
+    height: 72px;
+    max-width: 105px;
+  }
+  .brand-header img.logo-tii {
+    height: 54px;
+    max-width: 135px;
+  }
+  .brand-divider {
+    height: 50px;
+  }
 }
   </style>
 </head>
@@ -125,15 +162,17 @@
 
 <div class="container">
   <div class="header">
-    <!-- Brand Logos -->
-    <div class="brand-header">
-      <img src="TinkKreaTM.png" alt="TinkKrea Logo" class="logo-tinkkrea">
-      <div class="brand-divider"></div>
-      <img src="TIILogo.png" alt="TII Logo" class="logo-tii">
+    <!-- Enhanced Brand Header Card -->
+    <div class="brand-card">
+      <div class="brand-header">
+        <img src="TinkKreaTM.png" alt="TinkKrea Logo" class="logo-tinkkrea">
+        <div class="brand-divider"></div>
+        <img src="TIILogo.png" alt="Tinkering Institute for Innovation Logo" class="logo-tii">
+      </div>
     </div>
 
-    <span class="badge">DHR Ghoom Festival: BUILD|CODE|BATTLE </span>
-    <h1>TinkKrea Build, Code, Battle</h1>
+    <span class="badge">DHR GHoom Festival Special</span>
+    <h1>TinkKrea: BUILD | CODE | BATTLE </h1>
     <p class="subtitle">Enter candidate details and submit transaction details</p>
   </div>
 
@@ -188,9 +227,7 @@
         <!-- REPLACE 'your-upi-id@okaxis' with your actual VPA -->
         <img id="upiQr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=link2tii@okicici%26pn=TinkKrea%26am=500%26tn=DHR_BuildCodeBattle" alt="UPI QR Code">
       </div>
-      <p class="upi-info">Scan to pay.
-        UPI ID: link2tii@okicici 
-        UPI Number: 8900675570 </p>
+      <p class="upi-info">Scan to Pay.       UPI ID: link2tii@okicici       UPI Number: 8900675570 </p>
       
       <div style="margin-top: 14px; text-align: left;">
         <label style="color: #7c2d12;">UPI Reference No. / UTR / Transaction ID *</label>
