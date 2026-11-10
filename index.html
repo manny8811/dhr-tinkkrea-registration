@@ -1,109 +1,135 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DHR TinkKrea Build, Code, Battle - Registration</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1e3a8a;
-      --primary-hover: #172554;
-      --accent: #ea580c;
-      --bg: #0f172a;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-    body {
-      background: var(--bg);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 32px 16px;
-    }
-    .container {
-      background: var(--card-bg);
-      border-radius: 16px;
-      max-width: 580px;
-      width: 100%;
-      padding: 32px 28px;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
-    }
-    .header { text-align: center; margin-bottom: 24px; }
-    .badge {
-      display: inline-block;
-      background: #eff6ff;
-      color: var(--primary);
-      padding: 5px 14px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    h1 { font-size: 22px; font-weight: 800; color: #0f172a; line-height: 1.3; }
-    p.subtitle { color: var(--text-muted); font-size: 13.5px; margin-top: 4px; }
-    
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
-    .full-width { grid-column: span 2; }
-    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #334155; }
-    input {
-      width: 100%;
-      padding: 11px 14px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      font-size: 14px;
-      background: #f8fafc;
-      transition: all 0.2s ease;
-    }
-    input:focus { outline: none; border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12); }
-    input[readonly] { background: #e2e8f0; color: #475569; cursor: not-allowed; font-weight: 600; }
-    
-    .payment-box {
-      background: #fff7ed;
-      border: 1.5px dashed var(--accent);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 22px;
-      text-align: center;
-    }
-    .payment-title { font-size: 13px; font-weight: 700; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px; }
-    .fee-tag { font-size: 28px; font-weight: 800; color: #ea580c; margin: 6px 0; }
-    .qr-container { margin: 10px auto; display: inline-block; padding: 8px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .qr-container img { display: block; width: 140px; height: 140px; }
-    .upi-info { font-size: 12.5px; color: #7c2d12; margin-top: 4px; font-weight: 600; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    button {
-      width: 100%;
-      background: var(--primary);
-      color: white;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 22px;
-      transition: background 0.2s;
-    }
-    button:hover { background: var(--primary-hover); }
-    button:disabled { background: #94a3b8; cursor: not-allowed; }
-    #msg { text-align: center; font-size: 14px; font-weight: 600; margin-top: 14px; }
-    .success { color: #16a34a; }
-    .error { color: #dc2626; }
-    .brand-card {
+<title>DHR TinkKrea Build, Code, Battle - Registration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #1e3a8a;
+  --primary-hover: #172554;
+  --accent: #ea580c;
+  --bg: #0f172a;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  max-width: 580px;
+  width: 100%;
+  padding: 32px 28px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-block;
+  background: #eff6ff;
+  color: var(--primary);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+p.subtitle {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  margin-top: 4px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(30,58,138,0.12);
+}
+
+input[readonly] {
+  background: #e2e8f0;
+  color: #475569;
+  cursor: not-allowed;
+  font-weight: 600;
+}
+
+/* BRAND SECTION */
+
+.brand-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 16px 24px;
   margin-bottom: 24px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
 }
 
 .brand-header {
@@ -113,13 +139,11 @@
   gap: 28px;
 }
 
-/* Scaled up for visual balance */
 .brand-header img.logo-tinkkrea {
   height: 140px;
   max-width: 200px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.04));
 }
 
 .brand-header img.logo-tii {
@@ -127,60 +151,231 @@
   max-width: 350px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.04));
 }
 
 .brand-divider {
   width: 2px;
   height: 65px;
-  background: linear-gradient(180deg, transparent, #cbd5e1, transparent);
+  background: linear-gradient(
+    180deg, transparent, #cbd5e1, transparent
+  );
 }
 
-/* Mobile responsive scaling */
+/* PAYMENT SECTION */
+
+.payment-box {
+  background: #fff7ed;
+  border: 1.5px dashed var(--accent);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.payment-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #9a3412;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fee-tag {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ea580c;
+  margin: 6px 0;
+}
+
+.qr-container {
+  margin: 10px auto;
+  display: inline-block;
+  padding: 8px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.qr-container img {
+  display: block;
+  width: 160px;
+  height: 160px;
+}
+
+/* PAY NOW BUTTON */
+
+.pay-now-btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 14px auto 10px;
+  padding: 13px 18px;
+  background: #15803d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pay-now-btn:hover {
+  background: #166534;
+  transform: translateY(-1px);
+}
+
+.pay-now-btn:active {
+  transform: scale(0.98);
+}
+
+.upi-info {
+  font-size: 12.5px;
+  color: #7c2d12;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.payment-instructions {
+  font-size: 11.5px;
+  color: #9a3412;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.transaction-section {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.transaction-section label {
+  color: #7c2d12;
+}
+
+.transaction-section input {
+  background: white;
+}
+
+.transaction-hint {
+  font-size: 11px;
+  color: #9a3412;
+  margin-top: 6px;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 22px;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+.submit-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+#msg {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.success { color: #16a34a; }
+.error { color: #dc2626; }
+
 @media (max-width: 480px) {
+
+  .container {
+    padding: 22px 16px;
+  }
+
   .brand-card {
     padding: 12px 16px;
   }
+
   .brand-header {
     gap: 16px;
   }
+
   .brand-header img.logo-tinkkrea {
     height: 72px;
     max-width: 105px;
   }
+
   .brand-header img.logo-tii {
     height: 54px;
     max-width: 135px;
   }
+
   .brand-divider {
     height: 50px;
   }
+
+  .form-grid {
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 19px;
+  }
 }
-  </style>
+</style>
 </head>
+
 <body>
 
 <div class="container">
+
   <div class="header">
-    <!-- Enhanced Brand Header Card -->
+
     <div class="brand-card">
       <div class="brand-header">
-        <img src="TinkKreaTM.png" alt="TinkKrea Logo" class="logo-tinkkrea">
+
+        <img src="TinkKreaTM.png"
+             alt="TinkKrea Logo"
+             class="logo-tinkkrea">
+
         <div class="brand-divider"></div>
-        <img src="TIILogo.png" alt="Tinkering Institute for Innovation Logo" class="logo-tii">
+
+        <img src="TIILogo.png"
+             alt="Tinkering Institute for Innovation Logo"
+             class="logo-tii">
+
       </div>
     </div>
 
-    <span class="badge">DHR GHoom Festival Special</span>
-    <h1>TinkKrea: BUILD | CODE | BATTLE </h1>
-    <p class="subtitle">Enter candidate details and submit transaction details</p>
+    <span class="badge">DHR Ghoom Festival Special</span>
+
+    <h1>TinkKrea: BUILD | CODE | BATTLE</h1>
+
+    <p class="subtitle">
+      Enter candidate details and submit transaction details
+    </p>
+
   </div>
 
   <form id="regForm">
+
     <div class="form-grid">
+
       <div class="full-width">
         <label>Candidate Full Name *</label>
-        <input type="text" id="candidateName" required placeholder="e.g. Aayush Sharma">
+        <input type="text" id="candidateName"
+               required placeholder="e.g. Aayush Sharma">
       </div>
 
       <div>
@@ -195,115 +390,318 @@
 
       <div class="full-width">
         <label>School / Institution Name *</label>
-        <input type="text" id="schoolName" required placeholder="e.g. St. Teresa School">
+        <input type="text" id="schoolName"
+               required placeholder="e.g. St. Teresa School">
       </div>
 
       <div>
         <label>Candidate Phone Number *</label>
-        <input type="tel" id="phone" pattern="[0-9]{10}" required placeholder="10-digit mobile">
+        <input type="tel" id="phone"
+               pattern="[0-9]{10}" maxlength="10"
+               required placeholder="10-digit mobile">
       </div>
 
       <div>
         <label>Candidate Email ID *</label>
-        <input type="email" id="email" required placeholder="candidate@example.com">
+        <input type="email" id="email"
+               required placeholder="candidate@example.com">
       </div>
 
       <div>
         <label>Guardian Name *</label>
-        <input type="text" id="guardianName" required placeholder="Parent / Guardian">
+        <input type="text" id="guardianName"
+               required placeholder="Parent / Guardian">
       </div>
 
       <div>
         <label>Guardian Phone Number *</label>
-        <input type="tel" id="guardianPhone" pattern="[0-9]{10}" required placeholder="10-digit mobile">
+        <input type="tel" id="guardianPhone"
+               pattern="[0-9]{10}" maxlength="10"
+               required placeholder="10-digit mobile">
       </div>
+
     </div>
 
-    <!-- Payment section -->
+    <!-- PAYMENT SECTION -->
+
     <div class="payment-box">
+
       <div class="payment-title">Registration Fee</div>
+
       <div class="fee-tag">₹500</div>
+
       <div class="payment-title">Scan to Pay</div>
+
       <div class="qr-container">
-        <!-- REPLACE 'your-upi-id@okaxis' with your actual VPA -->
-        <img id="upiQr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=link2tii@okicici%26pn=TinkKrea%26am=500%26tn=DHR_BuildCodeBattle" alt="UPI QR Code">
+
+        <img id="upiQr"
+             alt="TinkKrea UPI Payment QR Code">
+
       </div>
-      <p class="upi-info">UPI ID: link2tii@okicici | UPI Number: 8900675570 </p>
-      
-      <div style="margin-top: 14px; text-align: left;">
-        <label style="color: #7c2d12;">UPI Reference No. / UTR / Transaction ID *</label>
-        <input type="text" id="txnId" required placeholder="12-digit UTR or Transaction ID" style="background: white;">
+
+      <p class="upi-info">
+        UPI ID: link2tii-1@okaxis
+      </p>
+
+      <!-- PAY NOW BUTTON -->
+
+      <button type="button"
+              class="pay-now-btn"
+              id="payNowBtn">
+
+        Pay ₹500 Now
+
+      </button>
+
+      <p class="payment-instructions">
+        Tap Pay Now to open your installed UPI payment app.
+        Alternatively, scan the QR code using another device.
+        Complete the payment and return to this registration page.
+      </p>
+
+      <!-- TRANSACTION ID -->
+
+      <div class="transaction-section">
+
+        <label>UPI Reference No. / UTR / Transaction ID *</label>
+
+        <input type="text"
+               id="txnId"
+               required
+               placeholder="Enter your payment UTR / Transaction ID">
+
+        <p class="transaction-hint">
+          Enter the transaction reference number displayed
+          in your UPI payment confirmation.
+        </p>
+
       </div>
+
     </div>
 
-    <button type="submit" id="submitBtn">Submit Registration</button>
+    <button type="submit"
+            class="submit-btn"
+            id="submitBtn">
+
+      Submit Registration
+
+    </button>
+
     <div id="msg"></div>
+
   </form>
+
 </div>
 
 <script>
-  // REPLACE with your deployed Apps Script URL
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzLGwo2i9iaroeFl6eyphSY0QKXpRFyer6Tr0EGWYedr-YPcbYoWU2mo4xS1k6IIx7gHQ/exec";
 
-  // Auto-calculate exact age from Date of Birth
-  const dobInput = document.getElementById('dob');
-  const ageInput = document.getElementById('age');
+// =======================================
+// PAYMENT CONFIGURATION
+// =======================================
 
-  dobInput.addEventListener('change', () => {
-    if (!dobInput.value) return;
-    const birthDate = new Date(dobInput.value);
-    const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    ageInput.value = age >= 0 ? age : 0;
-  });
+const UPI_ID = "link2tii-1@okaxis";
+const PAYEE_NAME = "TinkKrea";
+const AMOUNT = "500.00";
+const PAYMENT_NOTE = "DHR_Build_Code_Battle";
 
-  // Handle Form Submission
-  const form = document.getElementById('regForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const msg = document.getElementById('msg');
+// UPI payment link
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.innerText = "Submitting...";
-    msg.innerText = "";
+const upiLink =
+  "upi://pay?" +
+  "pa=" + encodeURIComponent(UPI_ID) +
+  "&pn=" + encodeURIComponent(PAYEE_NAME) +
+  "&am=" + AMOUNT +
+  "&cu=INR" +
+  "&tn=" + encodeURIComponent(PAYMENT_NOTE);
 
-    const payload = {
-      candidateName: document.getElementById('candidateName').value.trim(),
-      dob: dobInput.value,
-      age: ageInput.value,
-      schoolName: document.getElementById('schoolName').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      guardianName: document.getElementById('guardianName').value.trim(),
-      guardianPhone: document.getElementById('guardianPhone').value.trim(),
-      txnId: document.getElementById('txnId').value.trim()
-    };
 
-    try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+// Generate QR code using the same payment link
 
-      msg.className = "success";
-      msg.innerText = "Registration submitted successfully! Your ticket will be emailed once payment is verified.";
-      form.reset();
-      ageInput.value = "";
-    } catch (err) {
-      msg.className = "error";
-      msg.innerText = "Submission failed. Please check your network connection and try again.";
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerText = "Submit Registration";
-    }
-  });
+document.getElementById("upiQr").src =
+  "https://api.qrserver.com/v1/create-qr-code/?" +
+  "size=200x200&data=" + encodeURIComponent(upiLink);
+
+
+// =======================================
+// PAY NOW BUTTON
+// =======================================
+
+const payNowBtn = document.getElementById("payNowBtn");
+
+payNowBtn.addEventListener("click", function() {
+
+  // Open installed UPI application through UPI intent
+
+  window.location.href = upiLink;
+
+});
+
+
+// =======================================
+// AUTO CALCULATE AGE
+// =======================================
+
+const dobInput = document.getElementById("dob");
+const ageInput = document.getElementById("age");
+
+// Prevent selecting a future date
+
+dobInput.max = new Date().toISOString().split("T")[0];
+
+dobInput.addEventListener("change", function() {
+
+  if (!dobInput.value) {
+    ageInput.value = "";
+    return;
+  }
+
+  // Parse date without timezone conversion
+
+  const parts = dobInput.value.split("-").map(Number);
+
+  const birthYear = parts[0];
+  const birthMonth = parts[1] - 1;
+  const birthDay = parts[2];
+
+  const today = new Date();
+
+  let age = today.getFullYear() - birthYear;
+
+  const hasBirthdayPassed =
+    today.getMonth() > birthMonth ||
+    (today.getMonth() === birthMonth &&
+     today.getDate() >= birthDay);
+
+  if (!hasBirthdayPassed) {
+    age--;
+  }
+
+  ageInput.value = age >= 0 ? age : "";
+
+});
+
+
+// =======================================
+// GOOGLE APPS SCRIPT CONFIGURATION
+// =======================================
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzLGwo2i9iaroeFl6eyphSY0QKXpRFyer6Tr0EGWYedr-YPcbYoWU2mo4xS1k6IIx7gHQ/exec";
+
+
+// =======================================
+// FORM SUBMISSION
+// =======================================
+
+const form = document.getElementById("regForm");
+
+const submitBtn = document.getElementById("submitBtn");
+
+const msg = document.getElementById("msg");
+
+
+form.addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  // Ensure all fields are valid
+
+  if (!form.reportValidity()) {
+    return;
+  }
+
+  // Validate age
+
+  if (ageInput.value === "" || Number(ageInput.value) < 0) {
+
+    msg.className = "error";
+    msg.innerText = "Please enter a valid date of birth.";
+
+    return;
+  }
+
+  submitBtn.disabled = true;
+
+  submitBtn.innerText = "Submitting...";
+
+  msg.innerText = "";
+
+  const payload = {
+
+    candidateName:
+      document.getElementById("candidateName").value.trim(),
+
+    dob:
+      dobInput.value,
+
+    age:
+      ageInput.value,
+
+    schoolName:
+      document.getElementById("schoolName").value.trim(),
+
+    phone:
+      document.getElementById("phone").value.trim(),
+
+    email:
+      document.getElementById("email").value.trim(),
+
+    guardianName:
+      document.getElementById("guardianName").value.trim(),
+
+    guardianPhone:
+      document.getElementById("guardianPhone").value.trim(),
+
+    txnId:
+      document.getElementById("txnId").value.trim()
+
+  };
+
+
+  try {
+
+    await fetch(SCRIPT_URL, {
+
+      method: "POST",
+
+      mode: "no-cors",
+
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+
+      body: JSON.stringify(payload)
+
+    });
+
+
+    msg.className = "success";
+
+    msg.innerText =
+      "Registration submitted! Your ticket will be emailed once payment is verified.";
+
+    form.reset();
+
+    ageInput.value = "";
+
+
+  } catch (err) {
+
+    msg.className = "error";
+
+    msg.innerText =
+      "Submission failed. Please check your network connection and try again.";
+
+  } finally {
+
+    submitBtn.disabled = false;
+
+    submitBtn.innerText = "Submit Registration";
+
+  }
+
+});
+
 </script>
 
 </body>
